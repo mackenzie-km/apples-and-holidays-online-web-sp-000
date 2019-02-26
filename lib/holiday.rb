@@ -78,11 +78,12 @@ end
        printing_supply += "#{supply}, "
 end
 end
-end
+
 
 #print your string list with last comma cropped out
 crop = (printing_supply.length)-2
 puts "  #{string_holiday}: #{printing_supply[0...crop]}"
+end
 end
 
 def all_holidays_with_bbq(holiday_hash)
