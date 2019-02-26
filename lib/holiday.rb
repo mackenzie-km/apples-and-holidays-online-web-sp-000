@@ -69,7 +69,6 @@ if string_holiday.include?("_")
       word = word.capitalize!
     end
 string_holiday = temp_array.join(" ")
-  end
 else 
        string_holiday = holiday.to_s.capitalize!
 end 
