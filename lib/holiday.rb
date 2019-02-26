@@ -78,6 +78,7 @@ end
        printing_supply += "#{supply}, "
 end
 end
+end
 
 #print your string list with last comma cropped out
 crop = (printing_supply.length)-2
