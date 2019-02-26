@@ -48,20 +48,24 @@ def all_winter_holiday_supplies(holiday_hash)
 
 end
 
-require "pry"
+
 def all_supplies_in_holidays(holiday_hash)
 
+#setting blank strings
 string_season = ""
 string_holiday = ""
 
+#iterating over whole hash to pull seasons & holidays 
 holiday_hash.each do |season, holiday|
   string_season = "#{season.to_s.capitalize!}:"
   puts string_season
 
+#iterating over holiday to pull holiday & supply 
   holiday.each do |holiday, supply|
+
+#fixing formatting of printed holiday
     printing_supply = ""
     string_holiday = holiday.to_s.capitalize!
-    
 if string_holiday.include?("_")
    temp_array = string_holiday.split("_")
     temp_array.each do |word|
@@ -69,10 +73,14 @@ if string_holiday.include?("_")
     end
 string_holiday = temp_array.join(" ")
   end
+  
+# iterating over the supplies to prepare to print 
     supply.each do |supply|
        printing_supply += "#{supply}, "
        
 end
+
+#prints the supplies with the last comma cropped 
 crop = (printing_supply.length)-2
 puts "  #{string_holiday}: #{printing_supply[0...crop]}"
 end
