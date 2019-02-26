@@ -65,13 +65,14 @@ holiday_hash.each do |season, holiday|
 
 #fixing formatting of printed holiday
     printing_supply = ""
-    string_holiday = holiday.to_s.capitalize!
 if string_holiday.include?("_")
    temp_array = string_holiday.split("_")
     temp_array.each do |word|
       word = word.capitalize!
     end
 string_holiday = temp_array.join(" ")
+else 
+      string_holiday = holiday.to_s.capitalize!
   end
   
 # iterating over the supplies to prepare to print 
