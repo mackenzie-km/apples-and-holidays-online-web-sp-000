@@ -81,7 +81,6 @@ puts "  #{string_holiday}: #{printing_supply[0...crop]}"
 
 end
 end
-end
 
 def all_holidays_with_bbq(holiday_hash)
 bbq_array = []
